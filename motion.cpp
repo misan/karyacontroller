@@ -396,7 +396,7 @@ void backforward()
 }
 void planner(int32_t h)
 {
-    // mengubah semua cross feedrate biar optimal secepat mungkin
+// change all cross feedrate optimally as soon as possible
     int32_t p;
     tmove *curr;
     tmove *prev;
@@ -496,7 +496,7 @@ void planner(int32_t h)
     =================================================================================================================================================
     ADDMOVE
     =================================================================================================================================================
-  Rutin menambahkan sebuah vektor ke dalam buffer gerakan
+The routine adds a vector into the movement buffer
 */
 int32_t x1[NUMAXIS], x2[NUMAXIS];
 tmove *m;
@@ -1275,7 +1275,7 @@ void otherloop(int r)
     =================================================================================================================================================
     STARTMOVE
     =================================================================================================================================================
-  Mulai menjalankan 1 unit di buffer gerakan terakhir
+  Start running 1 unit in the last movement buffer
 */
 int subp = 1, laxis;
 
@@ -1399,7 +1399,7 @@ int32_t startmove()
     if (cmdfull)return 0;
     if ((head == tail)) {
         //Serial.println("?");
-        //m = 0; wm = 0; mctr = 0; // thi cause bug on homing delta
+        //m = 0; wm = 0; mctr = 0; // this cause bug on homing delta
         return 0;
     }
     // last calculation
@@ -1654,7 +1654,7 @@ void homing()
     WAITBUFFEREMPTY
     =================================================================================================================================================
   waitbufferempty
-  Proses semua gerakan di buffer, dan akhiri dengan deselerasi ke 0
+Process all movements in buffer, and end with deceleration to 0
 */
 void waitbufferempty()
 {
@@ -1682,7 +1682,7 @@ void waitbufferempty()
     =================================================================================================================================================
     NEEDBUFFER
     =================================================================================================================================================
-  loop sampai da buffer yang bebas
+loop to free da buffer
 */
 void needbuffer()
 {
@@ -1734,7 +1734,7 @@ void faildetected(){
     =================================================================================================================================================
     initmotion
     =================================================================================================================================================
-  inisialisasi awal, wajib
+Initialization is mandatory
 */
 void init_pos()
 {
