@@ -329,8 +329,8 @@ void prepareramp(int32_t bpos)
     =================================================================================================================================================
     PLANNER
     =================================================================================================================================================
-  dipanggil oleh   untuk mulai menghitung dan merencakanan gerakan terbaik
-  kontrol mbelok adalah cara mengontrol supaya saat menikung, kecepatan dikurangi sehingga tidak skip motornya
+  called by to start counting and planning the best moves
+   Mellok control is a way to control so that when cornering, the speed is reduced so as not to skip the motor
 
 */
 
