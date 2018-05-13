@@ -19,7 +19,7 @@
 #endif
 
 
-// bikin pusing !, buat check TIMER di AVR, malah freeze
+// make a headache !, make check TIMER in AVR, even freeze
 //#define DEBUGLOOP
 
 #ifdef DEBUGLOOP
@@ -241,15 +241,15 @@ void power_off()
     =================================================================================================================================================
     PREPARERAMP
     =================================================================================================================================================
-  Bertujuan mengkalkulasi berapa tangga aselerasi awal (rampup) dan akhir (rampdown)
-  rampup belum tentu speed naik, bisa jadi speed turun.
+Aim to calculate how the staircase of early acceleration (rampup) and end (rampdown)
+   rampup not necessarily speed up, could be speed down.
 
-  Profil dari gerakan ditentukan oleh fs (fstart), fn (f nominal), fe (f end)
-  dengan aselerasi yang ditentukan, maka dihitung berapa rampup, dan down
+   The profile of motion is determined by fs (fstart), fn (f nominal), fe (f end)
+   with the specified acceleration, then calculated how rampup, and down
 
-  Apabila rampup dan down bertemu, atau melebihi jarak totalstep, maka perlu dikalkulasi lagi fs,fn dan fe supaya ramp bisa terpenuhi
-  Untuk rampdown, harusnya rekursif ke belakang apabila tidak cukup jarak rampdown. namun implementasi sekarang
-  hanya melakukan kalkulasi ulang aselerasi supaya rampdown maksimal ya sama dengan totalstep
+   If the rampup and downs meet, or exceed the total stub range, then it needs to be calculated again fs, fn and fe so that the ramp can be fulfilled
+   For rampdown, should be recursive to the back if not enough rampdown distance. but implementation now
+   just recalculate the acceleration so that the maximum rampdown is equal to totalstep
 
 
     24-4-2018, i change the math of ramp calculation using mm distance
