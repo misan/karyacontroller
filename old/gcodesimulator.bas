@@ -132,7 +132,7 @@ sub prepareramp(mov as tmove pointer)
     end with
 end sub
 sub backplanner(h as integer)
-    ' mengubah semua cross feedrate biar optimal secepat mungkin
+    ' change all cross feedrate to optimum as soon as possible
     if bufflen()<2 then exit sub
     dim as integer i
     dim curr as tmove pointer
